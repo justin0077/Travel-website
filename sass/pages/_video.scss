@@ -1,0 +1,32 @@
+.video {
+    &__container {
+        padding-bottom: 1rem;
+
+       @media screen and (max-width: 340px) {
+           padding: 0;
+        }
+
+       @media screen and (min-width: 568px) {
+            display: grid;
+            grid-template-columns: .6fr;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: .7fr;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: var(--mb-2-5);
+
+        @media screen and (min-width: 1024px) {
+           padding: 0 8rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+}

@@ -1,0 +1,64 @@
+.discover {
+
+    @media screen and (min-width: 768px) {
+        &__container {
+            width: 610px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        &__container {
+            width: 700px;
+        }
+    }
+
+    &__card {
+        position: relative;
+        width: 200px;
+        overflow: var(--img-hidden);
+
+        @media screen and (min-width: 1024px) {
+            width: 237px;
+        }
+    }
+
+    &__data {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1rem;
+
+        @media screen and (min-width: 1024px) {
+            left: 1.5rem;
+            bottom: 2rem;
+        }
+    }
+
+    &__title,&__description {
+        color: var(--white-color);
+    }
+
+    &__title {
+        font-size: var(--h3-font-size);
+        margin-bottom: var(--mb-0-25);
+
+        @media screen and (min-width: 1024px) {
+            font-size: var(--h2-font-size);
+        }
+    }
+
+    &__description {
+        display: block;
+        font-size: var(--smaller-font-size);
+    }
+
+    &__img {
+        transition: var(--img-transition);
+
+        &:hover {
+            transform: var(--img-scale);
+        }
+    }
+}

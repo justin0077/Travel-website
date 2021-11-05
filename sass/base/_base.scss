@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+    }
+
+    @media screen and (min-height: 721px) {
+        margin: 0;
+    }
+
+    &.dark-theme {
+        --first-color-second:                   hsl(var(--hue-color), 54%, 12%);
+        --title-color:                         hsl(var(--hue-color), 24%, 95%);
+        --text-color:                          hsl(var(--hue-color), 8%, 75%);
+        --input-color:                         hsl(var(--hue-color), 29%, 16%);
+        --body-color:                          hsl(var(--hue-color), 29%, 12%);
+        --scroll-bar-color:                    hsl(var(--hue-color), 12%, 48%);
+        --scroll-thumb-color:                  hsl(var(--hue-color), 12%, 36%);
+    }
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+.section {
+    padding: 4.5rem 0 2.5rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 7rem 0 2rem;
+    }
+
+    &__title {
+       font-size: var(--h2-font-size);
+       color: var(--title-color);
+       text-align: center;
+        text-transform: capitalize;
+        margin-bottom: var(--mb-2);
+    }
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+
+     @media screen and (min-width: 1024px) {
+        margin-left: auto;
+        margin-right: auto;
+     }
+
+      @media screen and (min-width: 1200px) {
+        max-width: 1024px;
+      }
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
